@@ -1,0 +1,28 @@
+{
+    "newmessage1": {
+       "title":"第1新闻",
+        "message":"这是新闻内容",
+        "date":"2019-7-46"  
+    },
+    "newmessage2": {
+        "title":"第2新闻",
+         "message":"这是新闻内容",
+         "date":"2019-7-46"  
+     },
+     "newmessage3": {
+        "title":"第3新闻",
+         "message":"这是新闻内容",
+         "date":"2019-7-46"  
+     },
+     "newmessage4": {
+        "title":"第4新闻",
+         "message":"这是新闻内容",
+         "date":"2019-7-46"  
+     },
+     "newmessage5": {
+        "title":"第5新闻",
+         "message":"这是新闻内容",
+         "date":"2019-7-46"  
+     }
+   
+}

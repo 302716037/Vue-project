@@ -1,9 +1,9 @@
 <template>
     <div>
         <ul class="mui-table-view mui-grid-view mui-grid-9">
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+            <li @click="show()" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/newspage">
                     <img src="../../images/menu1.png" alt="">
-                    <div class="mui-media-body">新闻资讯</div></a></li>
+                    <div class="mui-media-body">新闻资讯</div></router-link></li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                     <img src="../../images/menu2.png" alt="">
                     <div class="mui-media-body">图片分享</div></a></li>
@@ -24,9 +24,13 @@
 </template>
 
 <script>
-export default {
-    
-}
+    import { MessageBox } from 'mint-ui';
+
+    export default {
+        data:{},
+        methods:{
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
@@ -38,12 +42,11 @@ export default {
     .mui-media-body{
         font-size: 13px;
     }
-    li:hover{
 
-    }
     div{
         background-color: #fff;
     }
+
     img{
         width: 20px;
         height: 20px;

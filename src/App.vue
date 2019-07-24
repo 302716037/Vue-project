@@ -1,10 +1,10 @@
 <template>
-  <div class="app">
+  <div class="app-container">
     <mt-header fixed title="银永鑫的VUE项目"></mt-header>
 
 	<!-- //设置页面切换动画 -->
 	<transition>
-		<router-view></router-view>	
+		<router-view class="routervuew-container"></router-view>	
 	</transition>
 
 	<nav class="mui-bar mui-bar-tab">
@@ -29,6 +29,8 @@
 </template>
 
 <script>
+	export default{
+	}
 </script>
 
 
@@ -46,11 +48,14 @@
 
 	.v-enter-active,
 	.v-leave-active {
-		transition: all 0.5s ease;
+		transition: all 0.2s ease;
 	}
 
-	.app{
-		overflow: hidden;
-		padding-top: 50px;
+	.app-container {
+		overflow-x: hidden;
+		/* padding: 50px 5px; */
 	}
+	.routervuew-container{
+		margin: 50px 5px;
+ 	}
 </style>

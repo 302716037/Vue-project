@@ -15,6 +15,7 @@ Vue.component(SwipeItem.name, SwipeItem)
 
 //导入mui的样式 
 import './lib/mui/css/mui.min.css'
+// import './lib/mui/js/mui.min.js' 
 
 //导入router.js文件
 import router from './router.js'
