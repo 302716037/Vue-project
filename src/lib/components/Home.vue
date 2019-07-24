@@ -21,7 +21,7 @@
                     <div class="mui-media-body">联系我们</div></a></li>
         </ul> 
     </div>
-</template>
+</template>   
 
 <script>
     import { MessageBox } from 'mint-ui';
