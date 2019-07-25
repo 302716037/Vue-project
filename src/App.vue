@@ -4,7 +4,7 @@
 
 	<!-- //设置页面切换动画 -->
 	<transition>
-		<router-view class="routervuew-container"></router-view>	
+		<router-view></router-view>	
 	</transition>
 
 	<nav class="mui-bar mui-bar-tab">
@@ -13,11 +13,11 @@
 				<span class="mui-tab-label">首页</span>
 			</router-link>
 			<router-link class="mui-tab-item" to="/member">
-				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-icon mui-icon-contact"></span>
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link class="mui-tab-item" to="/shopcar">
-				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item" to="/sreach">
@@ -34,7 +34,7 @@
 </script>
 
 
-<style  scoped>
+<style >
 	.v-enter {
 		opacity: 0;
 		transform: translateX(100%);
@@ -48,14 +48,11 @@
 
 	.v-enter-active,
 	.v-leave-active {
-		transition: all 0.2s ease;
+		transition: all 0.5s ease;
 	}
 
 	.app-container {
 		overflow-x: hidden;
-		/* padding: 50px 5px; */
+		padding: 50px 5px;
 	}
-	.routervuew-container{
-		margin: 50px 5px;
- 	}
 </style>

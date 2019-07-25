@@ -5,6 +5,7 @@ import Mamber from './lib/components/Mamber.vue'
 import Shopcar from './lib/components/Shopcar.vue'
 import Sreach from './lib/components/Sreach.vue'
 import Newspage from './lib/components/news/Newspage.vue'
+import Newsinfo from './lib/components/news/Newsinfo.vue'
  
 // 3. 创建路由对象
 var router = new VueRouter({
@@ -14,7 +15,9 @@ var router = new VueRouter({
     {path:'/member',component:Mamber},
     {path:'/shopcar',component:Shopcar},
     {path:'/sreach',component:Sreach},
-    {path:'/newspage',component:Newspage}
+    {path:'/home/newspage',component: Newspage},
+    {path:'/home/newsinfo/:id',component: Newsinfo}
+
   ],
   linkActiveClass: 'mui-active'
 })

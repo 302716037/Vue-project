@@ -13,13 +13,20 @@ Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 
+
 //导入mui的样式 
 import './lib/mui/css/mui.min.css'
-// import './lib/mui/js/mui.min.js' 
+import './lib/mui/css/icons-extra.css'
 
 //导入router.js文件
 import router from './router.js'
 
+//导入vue-resource模块
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
+
+//设置请求根路径
+Vue.http.options.root = 'http://vue.studyit.io';
 
 import app from './App.vue'
 
