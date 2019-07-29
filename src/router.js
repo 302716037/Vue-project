@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from './lib/components/Home.vue'
 import Shoping from './lib/components/Shoping.vue'
 import Shopcar from './lib/components/Shopcar.vue'
-import Sreach from './lib/components/Sreach.vue'
+import AboutMe from './lib/components/AboutMe.vue'
 
 import Newspage from './lib/components/news/Newspage.vue'
 import Newsinfo from './lib/components/news/Newsinfo.vue'
@@ -23,7 +23,7 @@ var router = new VueRouter({
     {path:'/home',component:Home},
     {path:'/shoping',component:Shoping},
     {path:'/shopcar',component:Shopcar},
-    {path:'/sreach',component:Sreach},
+    {path:'/aboutme',component:AboutMe},
 
     {path:'/home/newspage',component: Newspage},
     {path:'/home/newsinfo/:id',component: Newsinfo},

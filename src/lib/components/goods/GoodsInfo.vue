@@ -32,7 +32,8 @@
           <span>
             购买数量:
             <!-- 因为商品详情添加到购物车的数量选择器和购物车页面的数量选择器触发的事件并不一样需要单独封装 -->
-            <num-box></num-box>
+            <!-- getSelectCounts不能加括号，一加括号表表示传值，父亲就接受不到数据了 -->
+            <num-box @getCounts="getSelectCounts" :max="littleinfo.stock_quantity"></num-box>
           </span>
         </div>
       </div>
@@ -72,7 +73,9 @@ export default {
       image: [],
       littleinfo: {},
       detailedInfo: {},
-      ballFlag: false
+      ballFlag: false,
+      //用于接收子组件传来的购买数量,默认数量为1
+      selectCounts:1
     };
   },
   created() {
@@ -111,6 +114,16 @@ export default {
     //添加购物车按钮和事件
     addToShopCar() {
       this.ballFlag = !this.ballFlag;
+      //放在store中的数据
+      var goodsInfo = {
+        id:this.id,
+        counts:this.selectCounts,
+        price:this.littleinfo.sell_price,
+        selected:true
+      }
+      this.$store.commit('addInfoToCar',goodsInfo)
+      //把得到的的数据拼接称一个对象，传递给store
+
     },
     beforeEnter(el) {
       el.style.transform = "translate(0, 0)";
@@ -134,6 +147,11 @@ export default {
     },
     afterEnter(el) {
       this.ballFlag = !this.ballFlag;
+    },
+    //子组件向父组件传值
+    getSelectCounts(counts){
+      this.selectCounts = counts
+      console.log('父组件拿到的书量为'+ this.selectCounts)
     }
   },
   components: {

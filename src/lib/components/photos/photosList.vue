@@ -87,7 +87,7 @@ export default {
 }
 
 #slider {
-  z-index: -1000;
+  z-index: 50;
 }
 
 .photolist {

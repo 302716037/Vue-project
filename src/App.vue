@@ -11,6 +11,7 @@
       <transition>
         <router-view></router-view>
       </transition>
+
     </div>
 
     <nav class="mui-bar mui-bar-tab">
@@ -25,13 +26,13 @@
       <router-link class="mui-tab-item-llb" to="/shopcar">
         <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
           <!-- 这是购物车按钮的小角标 -->
-          <span class="mui-badge" id="badge">10</span>
+          <span class="mui-badge" id="badge">{{ $store.getters.getPriceAndCounts.counts }}</span>
         </span>
         <span class="mui-tab-label">购物车</span>
       </router-link>
-      <router-link class="mui-tab-item-llb" to="/sreach">
-        <span class="mui-icon mui-icon-search"></span>
-        <span class="mui-tab-label">搜索</span>
+      <router-link class="mui-tab-item-llb" to="/aboutme">
+        <span class="mui-icon mui-icon-person"></span>
+        <span class="mui-tab-label">关于我</span>
       </router-link>
     </nav>
   </div>
@@ -109,13 +110,12 @@ export default {
   padding-top: 40px;
   padding-bottom: 50px;
   overflow-x: hidden;
-}
 
+}
 .v-enter {
   opacity: 0;
   transform: translateX(100%);
 }
-
 .v-leave-to {
   opacity: 0;
   transform: translateX(-100%);
