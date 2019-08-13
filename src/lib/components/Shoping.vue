@@ -61,9 +61,9 @@ export default {
 
 <style lang="scss" scoped>
 //这是排版时候用的边框
-* {
-  border: 1px solid black;
-}
+// * {
+//   border: 1px solid black;
+// }
 .shoping-centent {
     padding: 0 5px;
     //设施整体的布局

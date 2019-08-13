@@ -1,6 +1,6 @@
 <template>
   <div class="shopingcar-page">
-    <div class="mui-card" v-for="item in goodsList" :key="item.id">
+    <div class="mui-card" v-for="(item,index) in goodsList" :key="item.id">
       <div class="mui-card-content">
         <div class="mui-card-content-inner shangpin">
           <mt-switch
@@ -13,7 +13,7 @@
             <div class="down">
               <span class="price">￥{{ item.sell_price }}</span>
               <num-box :counts="$store.getters.getGoodsCounts[item.id]" :id="item.id"></num-box>
-              <span>删除</span>
+              <button @click="delThis(item.id,index)">删除</button>
             </div>
           </div>
         </div>
@@ -56,6 +56,7 @@ export default {
     this.getshopcarlist();
   },
   methods: {
+    //获取商品列表
     getshopcarlist() {
       // 获取vuex中的id并拼接到本地得idlist中
       this.$store.state.car.forEach(element => {
@@ -73,8 +74,15 @@ export default {
           }
         });
     },
+    // 监听选择的改变
     selectChanged(goodsid, gs) {
       this.$store.commit("updataInfoSelected", { id: goodsid, selected: gs });
+    },
+    // 根据id删除商品
+    delThis(id,index) {
+      //删掉goodsList的同时要删除，浏览器缓存中的数据
+      this.goodsList.splice(index,1)
+      this.$store.commit("deleteInfoTocar",id)
     }
   }
 };

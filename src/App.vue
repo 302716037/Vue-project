@@ -58,7 +58,7 @@ export default {
       case "/shopcar":
         this.flag = false;
         break;
-      case "/sreach":
+      case "/aboutme":
         this.flag = false;
         break;
       default:
@@ -90,7 +90,7 @@ export default {
         case "/shopcar":
           this.flag = false;
           break;
-        case "/sreach":
+        case "/aboutme":
           this.flag = false;
           break;
         default:

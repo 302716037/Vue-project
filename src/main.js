@@ -83,8 +83,7 @@ var store = new Vuex.Store({
 			});
 
 			localStorage.setItem('car', JSON.stringify(state.car))
-		}
-		,
+		},
 		updataInfoSelected(state,getSelected){
 			state.car.forEach( element => {
 				if( element.id === getSelected.id){
@@ -94,6 +93,15 @@ var store = new Vuex.Store({
 			})
 
 			localStorage.setItem('car', JSON.stringify( state.car))
+		},
+		deleteInfoTocar(state,id){
+			state.car.forEach((item,index) => {
+				if(item.id === id){
+					state.car.splice(index,1)
+					return true
+				}
+			})
+			localStorage.setItem('car',JSON.stringify( state.car ))
 		}
 	},
 	getters:{
@@ -115,6 +123,7 @@ var store = new Vuex.Store({
 			// console.log(selected)
 			return selected 
 		},
+		//得到价格和数量
 		getPriceAndCounts(state){
 		 var list = {
 			 price:0,
