@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <mt-header fixed title="银永鑫的VUE项目">
+    <mt-header fixed title="沈长江的VUE项目">
       <span slot="left" @click="goBack" v-show="flag">
         <mt-button icon="back">返回</mt-button>
       </span>

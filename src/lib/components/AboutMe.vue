@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="mui-card">
-      <div class="mui-card-header">银永鑫</div>
+      <div class="mui-card-header">沈长江</div>
       <div class="mui-card-content">
         <div class="mui-card-content-inner">
             <h5>大三学生</h5>
